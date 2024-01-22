@@ -1,0 +1,25 @@
+GET http://localhost:3000/checkouts
+
+
+###
+GET http://localhost:3000/checkouts/2
+
+###
+POST http://localhost:3000/checkouts
+Content-Type: application/json
+
+{
+    "items": [
+        {
+            "product_id": -1,
+            "quantity": 2
+        },
+        {
+            "product_id": 2,
+            "quantity": 3
+        }
+    ]
+}
+
+###
+POST http://localhost:3000/checkouts/1/pay
